@@ -22,7 +22,7 @@ class MenusController < ApplicationController
   # POST /menus or /menus.json
   def create
     @menu = Menu.new(menu_params)
-
+    @menu.user_id = current_user.id
     respond_to do |format|
       if @menu.save
         format.html { redirect_to @menu, notice: "Menu was successfully created." }
@@ -64,6 +64,6 @@ class MenusController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def menu_params
-      params.require(:menu).permit(:name, :description, :price, :availability, :category, :user_id)
+      params.require(:menu).permit(:name, :description, :price, :availability, :category, :user_id, :picture)
     end
 end

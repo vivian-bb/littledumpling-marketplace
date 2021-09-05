@@ -27,7 +27,11 @@
 
 <p>
   <strong>User:</strong>
-  <%= @menu.user_id %>
+  <%= @menu.user.email %>
+</p>
+
+<p>
+<%= image_tag @menu.picture , class: "menu-image" %>
 </p>
 
 <%= link_to 'Edit', edit_menu_path(@menu) %> |
