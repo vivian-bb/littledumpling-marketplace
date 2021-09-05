@@ -8,11 +8,11 @@
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :availability %>
-    <%= f.input :category %>
-    <%= f.association :user %>
+    <%= f.input :category, collection: ["Dumpling", "Baozi", "Dishes", "Soup", "Drinks", "Desserts"] %>
+
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions ">
     <%= f.button :submit %>
   </div>
 <% end %>
