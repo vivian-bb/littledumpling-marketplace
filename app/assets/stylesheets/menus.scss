@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .menu-image{
-    width:60%;
-    height:60%;
+    width:30%;
+    height:30%;
+}
+.btn-right{
+    float:right;
+}
+.menu-description {
+    min-height: 50px;
+
+}
+
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(image-path("wildgrass.png"));
+    height: 40vh;
+    h1 {
+        color: white;
+    }
 }
