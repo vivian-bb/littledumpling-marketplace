@@ -2,7 +2,7 @@
 
 ## Link to [Github](https://github.com/vivian-bb/marketplace.git)
 
-## Link to
+## Link to [Heroku Deploy](https://git.heroku.com/littlefeimidumplings.git)
 
 User story
 
