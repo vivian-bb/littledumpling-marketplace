@@ -1,24 +1,18 @@
-# README
+# LittleFeimiDumplings app -- T2A2
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Link to [Github](https://github.com/vivian-bb/marketplace.git)
 
-Things you may want to cover:
+## Link to
 
-* Ruby version
+User story
 
-* System dependencies
+LittleFeimiDumplings is a double side website design for a small but have 30 years history of a mather and her daughter's Nickname. During COVID lockdown situation their dumpling restaurant almost collapse, and the old customers can't accept their life is without the favorite dumpling. The good solution is to create a website for online ordering and also provide a good chance to explore more new customers.
 
-* Configuration
+Wireframe
+![Wireframe Wireframe](/marketplace/app/assets/images/wireframe.png)
+ERD--database schema design
+![ERD ERD](/marketplace/app/assets/images/erdcopy.png)
+The project is allocated and tracked by trello.
+![ERD ERD](/marketplace/app/assets/images/trelloscreenshot.jpg)
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Problem
