@@ -6,12 +6,34 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
+        
+         <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="/item/page">Menu</a>
+        </li>
+
+         <li class="nav-item">
+        <a class="nav-link" href="/about/introduction">About Us</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="/booking/enquiries">Book Now</a>
+        </li>
+
+        <li class="nav-item">
+        <a class="nav-link" href="/contact/page">Contact Us</a>
+        </li>
+
+        <li class="nav-item active float-left">
         <% if user_signed_in?%>
-          
           <%= link_to "log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           <% end %>
         </li>
+
+       
         
       </ul>
     </div>

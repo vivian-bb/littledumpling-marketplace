@@ -38,6 +38,18 @@
 <%= image_tag @menu.picture , class: "menu-image" %>
 </p>
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> |
-<%= link_to 'Back', menus_path %>
+<%= link_to 'Edit', edit_menu_path(@menu) %> 
+<button data-stripe="payment" class="btn btn-primary p-3">Buy: $ <%= @menu.price %></button>
+
+<%= link_to 'Back', menu_path %>
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+      document.querySelector("[data-stripe='payment']").addEventListener("click", () => {
+        const stripe = Stripe("<%= Rails.application.credentials.dig(:stripe, :public_key) %>"); 
+        stripe.redirectToCheckout({
+              sessionId: "<%= @session_id %>"
+        });
+      });
+</script>
 
