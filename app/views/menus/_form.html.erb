@@ -8,7 +8,7 @@
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :availability %>
-    <%= f.input :category, collection: ["Dumpling", "Baozi", "Dishes", "Soup", "Drinks", "Desserts"] %>
+    <%= f.input :category_id, collection: Category.all %>
     <%= f.file_field :picture, class: "form-control-file" %>
   </div>
 
