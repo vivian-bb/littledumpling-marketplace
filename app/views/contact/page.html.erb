@@ -11,11 +11,11 @@
                 <p class="font-weight-bold text-md-left">Reservation: 1300 877 988</p>
                 <p class="font-weight-bold text-md-left">Business Associate: 1300 266 399</p>
                 <p class="font-weight-bold text-md-left">Email: feimilittledumplings@info.com.au</p>
+                <p class="font-weight-bold text-md-left">Address: Jackson Court, Doncaster east, Vic, Australia</p>
 
                     <div class="card z-depth-3"> 
                         <div class="card-content">
-                         <%# <div id="map"></div> %>
-                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.072482529069!2d145.14715721590554!3d-37.78834107975705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6388f64472119%3A0x86ee5b442e4e4c94!2sJackson%20Ct%2C%20Doncaster%20East%20VIC%203109!5e0!3m2!1sen!2sau!4v1632790636075!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                         <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.072482529069!2d145.14715721590554!3d-37.78834107975705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6388f64472119%3A0x86ee5b442e4e4c94!2sJackson%20Ct%2C%20Doncaster%20East%20VIC%203109!5e0!3m2!1sen!2sau!4v1632790636075!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                         </div>
                     </div>
             </div>
@@ -30,7 +30,7 @@
 
  <style type="text/css">
       /* Set the size of the div element that contains the map */
-      #map {
+      .maps {
         height: 300px;
         /* The height is 400 pixels */
         width: 100%;
@@ -38,20 +38,3 @@
       }
     </style>
 
-    <script>
-      // Initialize and add the map
-      function initMap() {
-        // The location of Uluru
-        const uluru = { lat: -37.81, lng: 144.96 };
-        // The map, centered at Uluru
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 4,
-          center: uluru,
-        });
-        // The marker, positioned at Uluru
-        const marker = new google.maps.Marker({
-          position: uluru,
-          map: map,
-        });
-      }
-    </script>
