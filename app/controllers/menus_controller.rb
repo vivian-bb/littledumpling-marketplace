@@ -1,5 +1,7 @@
 class MenusController < ApplicationController
   before_action :set_menu, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_categories, only: [:new, :edit]
 
   # GET /menus or /menus.json
   def index
@@ -9,23 +11,24 @@ class MenusController < ApplicationController
  # GET /menus/1 or /menus/1.json
  def show
   # session = Stripe::Checkout::Session.create(
-  #   payment_method_types: ['card'], 
-  #   customer_email: current_user.email,
-  #   line_items: [{ 
-  #     name: @menu.name, 
-  #     description: @menu.description,
-  #     amount: @menu.price,
-  #     currency: 'aud',
-  #     quantity: 1
+  #       payment_method_types: ['card'], 
+  #       customer_email: current_user.email,
+  #       line_items: [{ 
+  #       name: @menu.name, 
+  #       description: @menu.description,
+  #       amount: @menu.price,
+  #       currency: 'aud',
+  #       quantity: 1
   #    }],
-  #    payment_intent_data: { 
-  #      metadata: { 
-  #        user_id: current_user.id,
-  #        menu_id: @menu.id
-  #     }},
-  #     success_url: "#{root_url}/menus/#{@menu.id}",
-  #     cancel_url: "#{root_url}/menus"
-  # )
+
+  #       payment_intent_data: { 
+  #         metadata: { 
+  #           user_id: current_user.id,
+  #           # menu_id: @menu.id
+  #         }},
+  #         success_url: "#{root_url}/menus/#{@menu.id}",
+  #         cancel_url: "#{root_url}/menus"
+  #     )
   # @session_id = session.id
   end
 

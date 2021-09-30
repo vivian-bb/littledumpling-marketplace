@@ -4,44 +4,57 @@
     <h1>Little Feimi Dumplings</h1>
 </main>
 
-<p>
-  <strong>Name:</strong>
-  <%= @menu.name %>
-</p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @menu.description %>
-</p>
+<section class="container d-flex flex-column flex-md-row px-2 my-2 my-md-5">
+  <div class="content col-12 col-md-7 col-lg-8 p-0 pr-md-3">
+    <div class="col-12 p-0 main-preview mb-4">
+        <%if @menu.picture.attached?%>
+          <%=image_tag @menu.picture, class: "thumbnail card-img top"%>
+          <%else%>
+          <%=image_tag "default-image.jpg", class: "thumbnail card-img top"%>
+        <%end%>
+    </div>
+  </div>
 
-<p>
-  <strong>Price:</strong>
-  <%= @menu.price %>
-</p>
+  <div class='sidebar col-lg-4 p-0 mx-2 d-md-block'>
+      <h1 class='mb-sm-2 mb-md-5'><%= @menu.name.capitalize %></h1>
+       
+        <p class='text-muted'>
+          <strong>Description:</strong>
+          <%= @menu.description.capitalize %>
+        </p>
 
-<p>
-  <strong>Availability:</strong>
-  <%= @menu.availability %>
-</p>
+         <p class='text-muted'>
+          <strong>Price:</strong>
+          <%= @menu.price %>
+        </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @menu.category.name %>
-</p>
+         <p class='text-muted'>
+          <strong>Availability:</strong>
+          <%= @menu.availability %>
+        </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @menu.user.email %>
-</p>
+         <p class='text-muted'>
+          <strong>Category:</strong>
+          <%= @menu.category %>
+        </p>        
+            <br>
+       
+        
+        <%if current_user && @menu.availability == true %>
+            <button data-stripe="payment" class="btn btn-primary p-3">Buy: $ <%= @menu.price %></button> 
+        <%elsif @menu.availability == false %>
+            <button class='btn btn-secondary' disabled>Unavailable</button>
+        <%else%>
+            <%= button_to "Login to buy", new_user_session_path, class: "btn btn-info" %>
+        <%end%> 
+            <%= link_to 'Edit', edit_menu_path(@menu) %> 
+            <%= link_to 'Back', menu_path %>
+          </div>
+  
+</section>
 
-<p>
-<%= image_tag @menu.picture , class: "menu-image" %>
-</p>
 
-<%= link_to 'Edit', edit_menu_path(@menu) %> 
-<button data-stripe="payment" class="btn btn-primary p-3">Buy: $ <%= @menu.price %></button>
-
-<%= link_to 'Back', menu_path %>
 <script src="https://js.stripe.com/v3/"></script>
 
 <script>
@@ -52,4 +65,6 @@
         });
       });
 </script>
+
+
 
