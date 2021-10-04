@@ -13,6 +13,7 @@
           <%else%>
           <%=image_tag "default-image.jpg", class: "thumbnail card-img top"%>
         <%end%>
+        
     </div>
   </div>
 
@@ -48,10 +49,9 @@
         <%else%>
             <%= button_to "Login to buy", new_user_session_path, class: "btn btn-info" %>
         <%end%> 
-            <%= link_to 'Edit', edit_menu_path(@menu) %> 
-            <%= link_to 'Back', menu_path %>
-          </div>
-  
+            <%= link_to 'Edit', edit_menu_path(@menu.id), class:"btn btn-warning mr-3" %> 
+                <%= link_to 'Delete', @menu, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger mr-3" %>
+
 </section>
 
 

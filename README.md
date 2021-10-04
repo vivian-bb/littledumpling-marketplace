@@ -1,8 +1,36 @@
 # LittleFeimiDumplings app -- T2A2
 
-## Link to [Github](https://github.com/vivian-bb/marketplace.git)
+##### R7 Identification of the problem you are trying to solve by building this particular marketplace app.
 
-## Link to [Heroku Deploy](https://git.heroku.com/littlefeimidumplings.git)
+The small restaurant who doesn't able has their own website, but they also have marketing requirements and the platform they can show to customers their food and cultures.
+
+#####R8 Why is it a problem that needs solving?
+LittleFeimiDumplings is a simple app that provides services for small restaurants who sell dumplings and the people who love to eat dumplings. The restaurant can introduce the signature dishes and the inspiration of themselves. The app also functions so that clients can make a booking request, they can explore dumplings and other traditional food from the restaurant and order the food online. The app will solve the problem that the different culture restaurant can introduce their food and traditional online, the people who love to eat dumplings can also have more information and experience about that kind of food. They will have more choices when they want to trying different kinds of dumplings or restaurants.
+
+##### R9 A link (URL) to your deployed app (i.e. website)
+
+Link to [Heroku Deploy](https://littlefeimidumplings.herokuapp.com/)
+
+##### R10 A link to your GitHub repository (repo).
+
+Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
+
+##### R11 Description of your marketplace app (website), including:
+
+- Purpose: the app provided a restaurants marketing, booking and ordering service platform that can be used to serve for double side of restaurants and clients.
+
+- Functionality / features:
+
+  - The restaurant can CRUD(create, read, upload, Delete) the menu function that contents the dishes they served.
+  - The clients can booking table for their lunch or dinner online, also able to find location with google map in contact us page.
+  - The restaurant could upload their information and story in About us page.
+  - The app will require log in for safe purpose.
+  - The app can make payment for the order.
+
+- Sitemap:
+- Screenshots:
+- Target audience:
+- Tech stack (e.g. html, css, deployment platform, etc)
 
 User story
 
