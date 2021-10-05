@@ -26,10 +26,15 @@ class MenusController < ApplicationController
             user_id: current_user&.id,
             # menu_id: @menu.id
           }},
-          success_url: "#{root_url}/success?name=#{@menu.name}",
+          success_url: "#{root_url}/success?title=#{@menu.name}",
           cancel_url: "#{root_url}/menus"
       )
-  @session_id = session.id
+
+    @session_id = session.id
+    puts "*********"
+    pp @session_id
+    puts "*********"
+    
   end
 
   # GET /menus/new

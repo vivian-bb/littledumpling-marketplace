@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   get 'about/introduction'
   get 'contact/page'
   get 'item/page'
-  get "/payments/success", to: 'payments#success'
+  get "/success", to: 'payments#success', as: "payment_success"
+  post '/payments/webhook', to: "payments#webhook", as: "webhook"
   root 'home#page'
   resources :menus
   devise_for :users

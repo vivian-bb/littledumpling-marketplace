@@ -26,13 +26,18 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
   - The restaurant could upload their information and story in About us page.
   - The app will require log in for safe purpose.
   - The app can make payment for the order.
+  -
 
 - Sitemap:
 - Screenshots:
 - Target audience:
 - Tech stack (e.g. html, css, deployment platform, etc)
 
-User story
+  - gem ultrahood for received the webhook on localhost
+  - gem simpleform
+  - gem bootstrap for styling and layout
+
+  User story
 
 LittleFeimiDumplings is a double side website design for a small but have 30 years history of a mather and her daughter's Nickname. During COVID lockdown situation their dumpling restaurant almost collapse, and the old customers can't accept their life is without the favorite dumpling. The good solution is to create a website for online ordering and also provide a good chance to explore more new customers.
 
