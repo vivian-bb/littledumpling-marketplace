@@ -9,8 +9,7 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
-
-ActiveRecord::Schema.define(version: 2021_10_04_052833) do
+ActiveRecord::Schema.define(version: 2021_10_06_021221) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,6 +88,19 @@ ActiveRecord::Schema.define(version: 2021_10_04_052833) do
     t.index ["user_id"], name: "index_menus_on_user_id"
   end
 
+  create_table "orders", force: :cascade do |t|
+    t.bigint "menus_id", null: false
+    t.bigint "buyer_id", null: false
+    t.bigint "seller_id", null: false
+    t.string "reciept_url"
+    t.string "payment_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buyer_id"], name: "index_orders_on_buyer_id"
+    t.index ["menus_id"], name: "index_orders_on_menus_id"
+    t.index ["seller_id"], name: "index_orders_on_seller_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -109,4 +121,7 @@ ActiveRecord::Schema.define(version: 2021_10_04_052833) do
   add_foreign_key "listings", "users"
   add_foreign_key "menus", "categories"
   add_foreign_key "menus", "users"
+  add_foreign_key "orders", "menus", column: "menus_id"
+  add_foreign_key "orders", "users", column: "buyer_id"
+  add_foreign_key "orders", "users", column: "seller_id"
 end

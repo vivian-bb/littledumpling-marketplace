@@ -26,41 +26,87 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
   - The restaurant could upload their information and story in About us page.
   - The app will require log in for safe purpose.
   - The app can make payment for the order.
-  -
 
 - Sitemap:
+
+![Wireframe Wireframe](/app/assets/images/sitemap.png)
+
 - Screenshots:
-- Target audience:
+
+- Target audience: The small size restaurant that who is unable to build their own app, the restaurant must selling dumplings and the clients will be able to booking and ordering online.
 - Tech stack (e.g. html, css, deployment platform, etc)
 
   - deployment on heroku
   - AWS S3 for database storage
   - UltraHook for public webhook endpoints with development environments
-
   - gem ultrahood for received the webhook on localhost
   - gem simpleform
   - gem bootstrap for styling and layout
   - gem devise for authentication
 
-  User story
+##### R12 User story for your app
 
 LittleFeimiDumplings is a double side website design for a small but have 30 years history of a mather and her daughter's Nickname. During COVID lockdown situation their dumpling restaurant almost collapse, and the old customers can't accept their life is without the favorite dumpling. The good solution is to create a website for online ordering and also provide a good chance to explore more new customers.
 
-Wireframe
-![Wireframe Wireframe](/marketplace/app/assets/images/wireframe.png)
-ERD--database schema design
-![ERD ERD](/marketplace/app/assets/images/erdcopy.png)
-The project is allocated and tracked by trello.
-![ERD ERD](/marketplace/app/assets/images/trelloscreenshot.jpg)
+##### R13 Wireframes for your app
 
-Problem:
+![Wireframe Wireframe](/app/assets/images/wireframe.png)
+Home page
+![Wireframe Wireframe](/app/assets/images/home-wf.png)
+Menu page
+![Wireframe Wireframe](/app/assets/images/menu-list.png)
+Booking page
+![Wireframe Wireframe](/app/assets/images/booking-wf.png)
+About us page
+![Wireframe Wireframe](/app/assets/images/aboutus-wf.png)
+Contact Us page
+![Wireframe Wireframe](/app/assets/images/contactus-wf.png)
 
-- The Category should be a table, but it was setup as a string, so how to change this?
+##### R14 An ERD for your app
 
-  How to generate a new table connect with the original database?
+![ERD ERD](/app/assets/images/erdcopy.png)
 
-- The google map embed false in the contact up page
-- After add the payment button to menu page, the menu page could not add any new menu item sucssesfully.
+##### R15 Explain the different high-level components (abstractions) in your app
+
+##### R16 Detail any third party services that your app will use
+
+- AWS - Amazon web service
+
+  - S3 for database storage
+    ![AWS AWS](/app/assets/images/aws.png)
+  - Identity and access management (IAM) for users management
+    ![AWS AWS](/app/assets/images/authenticateusers.png)
+
+- Stripe - The payment service platform
+  ![Stripe Stripe](/app/assets/images/payment.png)
+
+##### R17 Describe your projects models in terms of the relationships (active record associations) they have with each other
+
+- The User is **has_many** orders and menus, the relationship between the user order and user menu is **One-to-Many**
+- The Order is **belongs_to buyers, sellers and menu** that means the **foreign key** is connect between the table that included buyer seller and menu.
+- The Menu
+  - **has_one_attached picture**, that content the one picture as attached for the dish details.
+  - **belongs_to user and category**, that means the **foreign key** is connect between the user and category table.
+- The Category **has_many menus** the relationship between the category and menu is **One-to-many**.
+- The Booking **belongs_to users** that the **foreign key** is connect between the booking table and user table
+
+##### R18 Discuss the database relations to be implemented in your application
+
+##### R19 Provide your database schema design
+
+- Schema screenshot
+  ![schema schema](/app/assets/images/schema1.png)
+
+  ![schema schema](/app/assets/images/schema2.png)
+
+  ![schema schema](/app/assets/images/schema3.png)
+
+  ![schema schema](/app/assets/images/schema4.png)
+
+  ##### R20 Describe the way tasks are allocated and tracked in your project
+
+- Trello for the project management and tracking.
+  ![Trello trello](/app/assets/images/trelloscreenshot.png)
 
 Explain the different high-level components (abstractions) in your App 0/6
 
