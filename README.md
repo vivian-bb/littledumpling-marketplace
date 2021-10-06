@@ -33,9 +33,14 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
 - Target audience:
 - Tech stack (e.g. html, css, deployment platform, etc)
 
+  - deployment on heroku
+  - AWS S3 for database storage
+  - UltraHook for public webhook endpoints with development environments
+
   - gem ultrahood for received the webhook on localhost
   - gem simpleform
   - gem bootstrap for styling and layout
+  - gem devise for authentication
 
   User story
 

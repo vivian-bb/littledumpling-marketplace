@@ -2,6 +2,7 @@ class MenusController < ApplicationController
   before_action :set_menu, only: %i[ show edit update destroy ]
   before_action :authenticate_user!, except: [:index, :show]
   # before_action :set_categories, only: [:new, :edit]
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
 
   # GET /menus or /menus.json
   def index
@@ -34,7 +35,7 @@ class MenusController < ApplicationController
     puts "*********"
     pp @session_id
     puts "*********"
-    
+
   end
 
   # GET /menus/new
@@ -93,4 +94,9 @@ class MenusController < ApplicationController
     def menu_params
       params.require(:menu).permit(:name, :description, :price, :availability, :category_id, :user_id, :picture)
     end
+
+    def set_categories
+      @categories = category.all
+    end
+
 end

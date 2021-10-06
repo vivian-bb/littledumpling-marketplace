@@ -14,9 +14,9 @@ categories = [
     {name:"Dishes", description:"Vegie or Meat dishes."}
 ]
 
-if User.count == 0
-    User.create(username:"Tester", email: "tester@gmail.com", password: "password", password_confirmation: "password")
-end
+# if User.count == 0
+#     User.create(username:"Tester", email: "tester@gmail.com", password: "password", password_confirmation: "password")
+# end
 
 if Category.count == 0
    categories.each do |category|
