@@ -66,7 +66,11 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
 
 ##### R12 User story for your app
 
-LittleFeimiDumplings is a double side website design for a small but have 30 years history of a mather and her daughter's Nickname. During COVID lockdown situation their dumpling restaurant almost collapse, and the old customers can't accept their life is without the favorite dumpling. The good solution is to create a website for online ordering and also provide a good chance to explore more new customers.
+The small restaurant owner Jenny want to post their information online, they have lots of clients before COVID, but the lock down policy was affect her business, the walk in client was reduce 60% than before. She want find a online service can upload the information about her restaurant and help the restaurant attract more clients.
+
+The manager of the restaurant want to find the online platform that can be provid service like upload, edit, delete their information includ the menus, dishes name and description, price, availability and also able to upload the pictures of dishes. the website also need to support client to make order food and make payment online. When lockdown has break, they also need booking functions that the client can send their requirement online to booking a table.
+
+The website is focus on clients who was looking for the restaurant must have dumplings, the dumpling lover Danny was very enjoy to eat different kind of dumplings, he was explore the different restaurant before lockdown, but now he don't have choice to eat the restautant that in a long distance with him. That was terrible, he was so glad to use an app if it will help him to find the restaurant who was good at make dumplings, then he can make order online. He find a great restaurant with taste fry dumplings and also a new dish named Yuanzi with hot soup he decided to go there to have dinner, so he need make a onling booking.
 
 ##### R13 Wireframes for your app
 
