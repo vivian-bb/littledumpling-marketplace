@@ -6,7 +6,7 @@ The small restaurants have difficult times during COVID, there is no customers b
 
 ##### R8 Why is it a problem that needs solving?
 
-LittleFeimiDumplings is a simple app that provides services for small restaurants who sell dumplings and the people who love to eat dumplings. The restaurant can introduce the signature dishes and the inspiration of themselves. The app also functions so that clients can make a booking request, they can explore dumplings and other traditional food from the restaurant and order the food online. The app will solve the problem that the different culture restaurant can introduce their food and traditional online, the people who love to eat dumplings can also have more information and experience about that kind of food. They will have more choices when they want to trying different kinds of dumplings or restaurants.
+LittleFeimiDumplings is a simple app that provides services for small restaurants who sell dumplings and the people who love to eat dumplings. The restaurant can post their signature dishes and the inspiration of themselves. The app also have functions that clients can make a booking request, they can explore dumplings and other traditional food from the restaurant and order the food online. The app will solve the problem that the restaurant need to change their mode of operation during the hard COVID situations, also the app will help people who love to eat dumplings and desserts to find out the food they love to eat. They will have more choices when they want to trying different kinds of dumplings or restaurants.
 
 ##### R9 A link (URL) to your deployed app (i.e. website)
 
@@ -34,7 +34,26 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
 
 - Screenshots:
 
-- Target audience: The small size restaurant that who is unable to build their own app, the restaurant must selling dumplings and the clients will be able to booking and ordering online.
+  - Home page
+    ![Home page](/app/assets/images/ss2.png)
+  - Menu listing page
+    ![Menu listing page](/app/assets/images/menulisting.png)
+  - Create new menu page
+    ![Create new menu page](/app/assets/images/menuss.png)
+  - Menu show page
+    ![Menu show page](/app/assets/images/ss.png)
+  - Payment page
+    ![payment page](/app/assets/images/payment-stripe-page.png)
+  - Booking page
+    ![booking page](/app/assets/images/bookingss.png)
+  - About us page
+    ![aboutus page](/app/assets/images/aboutusss.png)
+
+- Target audience:
+
+  - The restaurants that would being requried to post dishes online, use the functions inclued edit, delete and create, read the menu. Upload the details about dishes including dish's name, description, price and pictures and so on.
+  - The clients who was looking for the food for themselves and families, they would like to booking online and ordering food online.
+
 - Tech stack (e.g. html, css, deployment platform, etc)
 
   - deployment on heroku
