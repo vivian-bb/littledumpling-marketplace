@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 2021_10_06_021221) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  
   create_table "listings", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "category_id", null: false

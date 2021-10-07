@@ -3,7 +3,7 @@ class MenusController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   # before_action :set_categories, only: [:new, :edit]
   before_action :authenticate_user!, only: [:edit, :update, :destroy]
-
+  
   # GET /menus or /menus.json
   def index
     @menus = Menu.all
@@ -87,6 +87,7 @@ class MenusController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_menu
+      # This is make the queries to call the menu that will return an entry that content the same id that comes from params.
       @menu = Menu.find(params[:id])
     end
 
@@ -96,7 +97,8 @@ class MenusController < ApplicationController
     end
 
     def set_categories
-      @categories = category.all
+      # This is the queries to categories table that will be call and returned an array of all entry's of the table
+      @categories = Category.all
     end
 
 end

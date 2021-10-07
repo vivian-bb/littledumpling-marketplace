@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@booking) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :contact_number %>
+    <%= f.input :email_address %>
+    <%= f.input :date %>
+    <%= f.input :session, collection: ["Lunch at 11.30", "Lunch at 12", "Lunch at 12.30", "Lunch at 13", "Lunch at 13.30", "Dinner at 17:00", "Dinner at 17:30", "Dinner at 18:00"] %>
+  </div>
+
+  <div class="form-actions ">
+    <%= f.button :submit %>
+  </div>
+<% end %>

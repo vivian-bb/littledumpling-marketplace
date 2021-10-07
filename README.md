@@ -2,9 +2,10 @@
 
 ##### R7 Identification of the problem you are trying to solve by building this particular marketplace app.
 
-The small restaurant who doesn't able has their own website, but they also have marketing requirements and the platform they can show to customers their food and cultures.
+The small restaurants have difficult times during COVID, there is no customers but they still want to provid food for families. Our website helps clients to finding their favorite dishes and buy them.
 
-#####R8 Why is it a problem that needs solving?
+##### R8 Why is it a problem that needs solving?
+
 LittleFeimiDumplings is a simple app that provides services for small restaurants who sell dumplings and the people who love to eat dumplings. The restaurant can introduce the signature dishes and the inspiration of themselves. The app also functions so that clients can make a booking request, they can explore dumplings and other traditional food from the restaurant and order the food online. The app will solve the problem that the different culture restaurant can introduce their food and traditional online, the people who love to eat dumplings can also have more information and experience about that kind of food. They will have more choices when they want to trying different kinds of dumplings or restaurants.
 
 ##### R9 A link (URL) to your deployed app (i.e. website)
@@ -58,15 +59,14 @@ Menu page
 Booking page
 ![Wireframe Wireframe](/app/assets/images/booking-wf.png)
 About us page
-![Wireframe Wireframe](/app/assets/images/aboutus-wf.png)
-Contact Us page
-![Wireframe Wireframe](/app/assets/images/contactus-wf.png)
 
 ##### R14 An ERD for your app
 
-![ERD ERD](/app/assets/images/erdcopy.png)
+![ERD ERD](/app/assets/images/erd.png)
 
 ##### R15 Explain the different high-level components (abstractions) in your app
+
+In my app, I had 6 components that under the the parent components --- ApplicationRecord, the Booing, Category, Menu, Order and User (The listing component that I was no longer use it anymore but I don't have enough time to delete it, it could be caused some errors so I didn't to remove it on this stage.). The components contented all the function that my app have.
 
 ##### R16 Detail any third party services that your app will use
 
@@ -82,15 +82,27 @@ Contact Us page
 
 ##### R17 Describe your projects models in terms of the relationships (active record associations) they have with each other
 
-- The User is **has_many** orders and menus, the relationship between the user order and user menu is **One-to-Many**
-- The Order is **belongs_to buyers, sellers and menu** that means the **foreign key** is connect between the table that included buyer seller and menu.
+- The User is **has_many** orders and menus, the relationship between the user order and user menu is **Zero-to-Many**
+- The Order is **belongs_to user (buyers, sellers) and menu** that means **foreign key** is connect between the table that included buyer seller and menu.
 - The Menu
   - **has_one_attached picture**, that content the one picture as attached for the dish details.
-  - **belongs_to user and category**, that means the **foreign key** is connect between the user and category table.
-- The Category **has_many menus** the relationship between the category and menu is **One-to-many**.
+  - **belongs_to user and category**, that means the user id (**foreign key**) is connect between the menu and category table.
+- The Category **has_many menus** the relationship between the category and menu is **One-to-many** connect by category id.
 - The Booking **belongs_to users** that the **foreign key** is connect between the booking table and user table
 
 ##### R18 Discuss the database relations to be implemented in your application
+
+I had 5 tables contented the different part of the database.
+
+The **user table** is contains all the information about the user logged in, that will included User Id, user's email address, password and username. The **user id** is foreign key connect the user table with **order table** and **menu table** also the **booking table**. One user can have **zero-to-many** bookings, Menus and orders.
+
+The **menu table** was contented the data about the dishes information, it was included user id, category id(that is the foreign key connect the menu table with categories table), name, description, price, availability, picture.
+
+The **categories table** is contented the category id, category name and description, that is help restaurant owner to classify the dishes and descript what the dishes type specificly were.
+
+The **order table** is contented the data that the buyer clients successful paid the order, so each user can have **zero-to-many** orders, also the its could content many different dishes that from menu table.
+
+The **Booking table** only contented the data that the clients who was booking a table, it connect by foreign key user_id with user table. Each user could have **zero-to-many** bookings.
 
 ##### R19 Provide your database schema design
 
@@ -106,53 +118,9 @@ Contact Us page
   ##### R20 Describe the way tasks are allocated and tracked in your project
 
 - Trello for the project management and tracking.
+
+  - Link to [My Tello board](https://trello.com/b/TbDRfclA/marketplace-proj)
+
+  I was using trello to manage the project tasks. I create few of my goals and working needs to be done, but only use at the the project start period, I didn't use it whole time for the project.
+
   ![Trello trello](/app/assets/images/trelloscreenshot.png)
-
-Explain the different high-level components (abstractions) in your App 0/6
-
-Detail any third party services that your App will use 0/6
-
-Identify the problem you’re trying to solve by building this particular marketplace App? Why is it a problem that needs solving?2/6
-Talks about the idea for the site but does not identify the problem
-
-Describe your project’s models in terms of the relationships (active record associations) they have with each other0/6
-
-Discuss the database relations to be implemented 0/6
-
-Provide your database schema design 3/6
-
-Provide User stories for your App 0/6
-
-Provide Wireframes for your App 3/6 ----did 5 wireframe
-
-Describe the way tasks are planned and tracked in your project 2/6
-Some evidence of user stories but no indication of how the tasks were planend or tracked
-
-Some evidence of user stories but no indication of how the tasks were planend or tracked
-
-ERD provided represents a normalised database model 3/6
-ERD is basic but reflects the app
-
-Model implementation represents a normalised database model 2/6
-Only two models are implemented, categories should be a table not a string
-
-Database design appropriately addresses the requirements of a complex scenario2/6
-This design is not sufficient to solve the problem of a marketplace
-
-Implemented controllers demonstrate correct use of commands to query the database infrastructure3/6
-Queries look untouched from scaffold on menus controller, item controller retrieves all menus
-
-Queries implemented provide correct data for the given scenario3/6
-Queries in scaffold get the right data
-
-Code comments demonstrate how the queries implemented correctly represent the database structure0/6
-No evidence of code comments
-
-Identify and use appropriate model methods3/6
-Uses scaffolded methods
-
-Minimising database calls needed to perform an action0/6
-No attempt made to minimize any database calls
-
-Sanitise and validates input to maintain data integrity0/6
-No evidence of santisation or validation
