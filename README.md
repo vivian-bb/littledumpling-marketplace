@@ -55,12 +55,12 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
   - The clients who was looking for the food for themselves and families, they would like to booking online and ordering food online.
 
 - Tech stack (e.g. html, css, deployment platform, etc)
-
+  - html, css, scss, ruby on rails
   - deployment on heroku
   - AWS S3 for database storage
   - UltraHook for public webhook endpoints with development environments
   - gem ultrahood for received the webhook on localhost
-  - gem simpleform
+  - gem simpleform for log in form, menu create, edit, update and destroy and booking form
   - gem bootstrap for styling and layout
   - gem devise for authentication
 
