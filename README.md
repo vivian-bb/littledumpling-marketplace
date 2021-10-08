@@ -18,7 +18,7 @@ Link to [Github](https://github.com/vivian-bb/littledumpling-marketplace)
 
 ##### R11 Description of your marketplace app (website), including:
 
-- Purpose: the app provided a restaurants marketing, booking and ordering service platform that can be used to serve for double side of restaurants and clients.
+- Purpose: the app provided service for restaurants included marketing, booking, ordering and make payment. The restaurants will be able to manage their menus and get more clients.
 
 - Functionality / features:
 
